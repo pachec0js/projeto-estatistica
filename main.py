@@ -8,8 +8,9 @@ def limpar_dados(dados_sujos):
             dados_limpos.append(dado)
     return dados_limpos
 
-def calcular_media():
-    pass
+def calcular_media(dados):
+    soma = sum(dados)
+    return soma / len(dados)
 
 def calcular_mediana():
     pass
