@@ -9,23 +9,14 @@ def limpar_dados(dados_sujos):
     return dados_limpos
 
 def calcular_media(dados):
+    soma = sum(dados)
+    return soma / len(dados)
     pass
 
 def calcular_mediana(dados):
     dados.sort()
     meio = len(dados) // 2
     return dados[meio]
-
-def calcular_variancia(dados):
-    pass
-
-def calcular_media():
-    pass
-
-
-def calcular_mediana():
-    pass
-
 
 def calcular_variancia(dados):
     media = sum(dados) / len(dados)
@@ -40,7 +31,7 @@ def obter_extremos(dados):
 
 
 dados = limpar_dados(dados_sujos)
-
-print("Dados processados:", dados)
+print(f"Dados processados: {dados}")
+print("Verificado por: Fábio")
 print("Verificado por: Arthur")
 print(f"Verificado por Bruno Pezzolato")
