@@ -11,7 +11,6 @@ def limpar_dados(dados_sujos):
 def calcular_media(dados):
     soma = sum(dados)
     return soma / len(dados)
-    pass
 
 def calcular_mediana(dados):
     dados.sort()
@@ -25,13 +24,29 @@ def calcular_variancia(dados):
         total += (cada - media) ** 2 / len(dados)
     return total
 
+def obter_extremos(lista_filtrada):
+    menor_numero = lista_filtrada[0]
+    maior_numero = lista_filtrada[0]
+    
+    for numero in lista_filtrada:
+        if numero < menor_numero:
+            menor_numero = numero
+        
+        elif numero > maior_numero:
+            maior_numero = numero
+    
+    return menor_numero, maior_numero
+    '''menor_numero = min(lista_filtrada)
+    maior_numero = max(lista_filtrada)
 
-def obter_extremos(dados):
-    pass
+    return menor_numero, maior_numero'''
 
 
 dados = limpar_dados(dados_sujos)
+calculo_extr = obter_extremos(dados)
+print(f"Os numeros extremos são: {calculo_extr}")
 print(f"Dados processados: {dados}")
+print("Verificado por: Vinicius")
 print("Verificado por: Fábio")
 print("Verificado por: Arthur")
 print(f"Verificado por Bruno Pezzolato")
